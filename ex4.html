@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="ex4.css">
+</head>
+<body>
+    
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <br>
+        <button id="clear" onclick="current_display='';document.querySelector('#display').value=current_display;">clear</button>
+        <button onclick="current_display+=1;document.querySelector('#display').value=current_display;">1</button>
+        <button onclick="current_display+=2;document.querySelector('#display').value=current_display;">2</button>
+        <button onclick="current_display+=3;document.querySelector('#display').value=current_display;">3</button>  
+        <button onclick="current_display+=4;document.querySelector('#display').value=current_display;">4</button>
+        <button onclick="current_display+=5;document.querySelector('#display').value=current_display;">5</button>
+        <br>
+        <button onclick="current_display+=6;document.querySelector('#display').value=current_display;">6</button>
+        <button onclick="current_display+=7;document.querySelector('#display').value=current_display;">7</button>
+        <button onclick="current_display+=8;document.querySelector('#display').value=current_display;">8</button>
+        <button onclick="current_display+=9;document.querySelector('#display').value=current_display;">9</button>
+        <button onclick="current_display+=0;document.querySelector('#display').value=current_display;">0</button>
+        <br>
+        <button class="symbols" onclick="current_display+='+';document.querySelector('#display').value=current_display;">+</button>
+        <button class="symbols" onclick="current_display+='-';document.querySelector('#display').value=current_display;">-</button>
+        <button class="symbols" onclick="current_display+='*';document.querySelector('#display').value=current_display;">*</button>
+        <button class="symbols" onclick="current_display+='/';document.querySelector('#display').value=current_display;">/</button>
+        <button class="symbols" onclick="current_display+='.';document.querySelector('#display').value=current_display;">.</button>
+        <br>
+        <button id="enter" onclick="let result=eval(current_display);current_display=result;document.querySelector('#display').value=current_display;">Enter</button>
+    </div>
+
+    <script src="ex4.js"></script>
+</body>
+</html>
