@@ -1,0 +1,14 @@
+button{
+    width: 200px;
+    height: 50px;
+    background-color: aqua;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+button:hover{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(84, 244, 69);
+    border: 2px dashed red;
+    border-radius: 10px;
+}
