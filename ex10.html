@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nested Object</title>
+</head>
+<body>
+    <h1>Nested Objects</h1>
+
+    <script>
+        let product={
+            company:'Mango',
+            price:200,
+            item_name:'T-shirt',
+            rating:{
+                stars:4.5,
+                no_of_reviews:124,
+            },
+            displayprice: function(){
+                console.log(`Price of Product is ${product.price}`)
+                //can be written using "this"
+                console.log(`Price of Product is ${this.price}`)
+            },
+        };
+
+        product.displayprice();
+
+        //console is a object
+        console.log(typeof(console));
+        console.log(console);
+        //Math is a object
+        console.log(typeof(Math));
+        console.log(Math);
+        //so we use . operator to access data(Ex : Math.random())
+
+    </script>
+</body>
+</html>
