@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>References</title>
+</head>
+<body>
+    
+    <script>
+        let a=5;
+        let b=a;
+        console.log(a);
+        console.log(b);
+        a=8;
+        console.log(a);
+        console.log(b);
+
+        //object works on reference not on the data
+        let x={
+            num1:2,
+            num2:3,
+        };
+        let y=x;
+        console.log(x);
+        console.log(y);
+        x.num1=7;//changes num1 value in both x and y as y=x
+        console.log(x);
+        console.log(y);
+
+        let p={
+            p1:2,
+        };
+        let q={
+            p1:2,
+        };
+        console.log(p==q);
+
+        //destructure
+        let product={
+            company:'Mango',
+            price:200,
+            item_name:'T-shirt',
+        };
+        let {company}=product;
+        //this is same as company=product.company
+        console.log(company);
+    </script>
+</body>
+</html>
