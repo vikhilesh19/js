@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Local Storage</title>
+</head>
+<body>
+    
+    <script>
+        localStorage.setItem('Name','T-shirt');
+        localStorage.setItem('Price',250);
+        //this will be permanently stored as key value in application
+        //Even if u remove then also it will be stored
+        //localStorage.setItem('quanity',20);
+        //above quantity is removed
+        console.log(localStorage.getItem('quanity'));
+        console.log(localStorage.getItem('Price'));
+
+        let product={
+            name:'T-shirt',
+            price:300,
+            rating:{
+                stars:4.8,
+                noofreviews:908,
+            },
+        };
+        localStorage.setItem('product',product);
+        console.log(localStorage.getItem('product'));
+        //Here it cannot store a object
+        //so it stores a garbage value and return garbage value
+        //So convert it into string and store it localstorage
+        localStorage.setItem('product2',JSON.stringify(product));
+        console.log(localStorage.getItem('product2'));
+        //now to again convert back into object
+        let product3=JSON.parse(localStorage.getItem('product2'));
+        console.log(product3);
+        console.log(typeof(product3));
+
+        //to remove an item from localstorage
+        localStorage.removeItem('Price');
+
+        //totally clear localstorage
+        localStorage.clear();
+    </script>
+</body>
+</html>
