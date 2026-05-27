@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom</title>
+</head>
+<body>
+    <button class="button">button</button>
+    <div class="mydiv">
+        This is my div
+    </div>
+    <script>
+        //gives the location of the webpage or url
+        console.log(document.location);
+
+        //Gives the title
+        console.log(document.title);
+
+        //gives domain of website
+        console.log(document.domain);
+
+        //
+        console.log(document.querySelector('button').classList);
+
+        //Add a new button to exsting class
+        let button=document.createElement('button');
+        button.innerText='Click Me'
+        document.querySelector('.mydiv').appendChild(button);
+
+    </script>
+</body>
+</html>
