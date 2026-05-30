@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advance functions</title>
+</head>
+<body>
+    
+    <script>
+
+        //Anonymous function
+        let sum=function(num1,num2){
+            return num1+num2;
+        }
+        console.log(sum(4,5));
+        console.log(typeof(sum));
+
+        //Arrow function
+        let sum1=(num1,num2)=>{
+            return num1+num2;
+        }
+        console.log(sum1(1,-1));
+        let sq=(num)=>{
+            return num*num;
+        }
+        console.log(sq(5));
+        //if only single line(only direct return statement)
+        let cb=(num)=>{
+            return num*num*num;
+        }
+        console.log(cb(5)-sq(5));
+    </script>
+</body>
+</html>
